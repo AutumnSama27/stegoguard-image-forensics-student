@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Create demo image
+        run: python make_demo_image.py
+
       - name: Check images folder
         run: ls -la images
 
