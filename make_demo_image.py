@@ -9,9 +9,7 @@ if mode not in ["clean", "suspicious"]:
 Path("images").mkdir(exist_ok=True)
 
 # Small valid 1x1 PNG image.
-png_data = base64.b64decode(
-    "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGUlEQVR4nGPccuc/AymAiSTVoxpGNQwpDQAFDwKv7pgu6gAAAABJRU5ErkJggg=="
-)
+png_data = Path("images/TIU1.png").read_bytes())
 
 if mode == "suspicious":
     png_data += b"\nCYBER: This is harmless demo hidden data for the StegoGuard lab.\n"
